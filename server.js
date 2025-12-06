@@ -8,10 +8,7 @@ const cookieParser = require('cookie-parser')
 dotenv.config()
 
 app.use(cors({
-    origin: [
-        "http://35.154.147.11",   // EC2 frontend
-        "http://35.154.147.11:3000", 
-    ],
+    origin: "*",
     credentials: true
 }));
 
