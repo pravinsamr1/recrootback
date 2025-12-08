@@ -14,8 +14,7 @@ const corsOptions = {
     credentials: true                  // set true if you use cookies/auth headers
   };
   
-  app.use(cors(corsOptions));    
-
+app.use(cors(corsOptions));    
 app.use(express.json())
 app.use(cookieParser())  // ONLY ONCE
 
