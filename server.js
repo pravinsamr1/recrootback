@@ -7,9 +7,12 @@ const cookieParser = require('cookie-parser')
 
 dotenv.config()
 
-const corsOptions = {
-    origin: '*',   // your frontend origin (include protocol and port if any)                // set true if you use cookies/auth headers
-  };
+app.use(cors({
+  origin: "http://35.154.147.11",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
   
 app.use(cors(corsOptions));    
 app.use(express.json())
